@@ -2,12 +2,12 @@
 
 import sys
 
-# Function to solve the N-queens problem
+# Function to solve the N-queens puzzle
 def solve(row, column):
     # Initialize the solver with an empty solution
     solver = [[]]
     
-    # Iterate through each row and place queens recursively
+    # Iterate through each row to place queens recursively
     for q in range(row):
         solver = place_queen(q, column, solver)
     return solver
