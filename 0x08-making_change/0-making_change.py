@@ -1,15 +1,22 @@
 #!/usr/bin/python3
-""" Python script for generating change """
+""" Coin Change Algorithm """
 
-def make_change(coins, total):
-    """ Generate the minimum number of coins needed to reach a total amount.
+def makeChange(coins, total):
+    """ Determine the fewest number of coins needed to meet a given amount total.
 
     Args:
         coins (list): List of available coin denominations.
-        total (int): Total amount needed.
+        total (int): The target total amount.
 
     Returns:
-        int: Minimum number of coins needed, or -1 if it's not possible to reach the total.
+        int: Fewest number of coins needed to achieve the total. Returns 0 if total is 0 or less.
+             Returns -1 if the total cannot be met by any combination of coins.
+
+    Note:
+        - coins is a list of the values of the coins in your possession.
+        - The value of a coin will always be an integer greater than 0.
+        - You can assume you have an infinite number of each denomination of coin in the list.
+        - Your solution’s runtime will be evaluated in this task.
     """
     if total <= 0:
         return 0
@@ -30,4 +37,3 @@ def make_change(coins, total):
         temp -= 1
 
     return -1
-
